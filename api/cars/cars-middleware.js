@@ -51,7 +51,7 @@ const checkVinNumberUnique = async (req, res, next) => {
     const { vin } = req.body
     const existing = await db('cars').where('vin', vin).first()
     if(existing){
-      next({ status: 400, message: `vin ${vin} already exists`})
+      res.status(400).json({ message: `vin ${vin} already exists`})
     } else {
       next()
     }
