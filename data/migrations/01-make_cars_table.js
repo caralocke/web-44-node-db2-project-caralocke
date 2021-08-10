@@ -9,7 +9,7 @@ exports.up = function (knex) {
         .notNullable()
       table.text('model')
         .notNullable()
-      table.decimal('mileage')
+      table.integer('mileage')
         .notNullable()
       table.text('title')
       table.text('transmission')
