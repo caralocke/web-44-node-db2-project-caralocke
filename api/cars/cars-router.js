@@ -13,5 +13,9 @@ router.get('/', (req, res, next) => {
         })
 })
 
+router.get('/:id', checkCarId, (req, res, next) => {
+    res.json(req.car)
+})
+
 
 module.exports = router;
